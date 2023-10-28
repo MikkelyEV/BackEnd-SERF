@@ -1,6 +1,7 @@
 import express from 'express';
 import { Sequelize } from 'sequelize';
 import { conn } from './db.js'
+import { PORT } from './config.js'
 
 const app = express();
 
@@ -17,5 +18,5 @@ app.get('/primas_pendientes', async (req, res) => {
     res.send(result[0])
 })
 
-app.listen(3000)
+app.listen(PORT)
 console.log('Server on port 3000')
