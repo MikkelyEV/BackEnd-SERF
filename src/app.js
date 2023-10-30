@@ -2,8 +2,10 @@ import express from 'express';
 import { Sequelize } from 'sequelize';
 import { conn } from './db.js'
 import { PORT } from './config.js'
+import cors from 'cors';
 
 const app = express();
+app.use(cors());
 
 app.get('/oficinas', async (req, res) => {
     const [oficinas] = await conn.query(`SELECT * FROM OFICINA AS OFICINAS`);
