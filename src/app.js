@@ -9,14 +9,12 @@ app.use(cors());
 
 app.get('/oficinas', async (req, res) => {
     const [oficinas] = await conn.query(`SELECT * FROM OFICINA AS OFICINAS`);
-    console.log(oficinas)
     res.send(oficinas)
 })
 
 app.get('/primas_pendientes', async (req, res) => {
     const oficina = req.query.id_oficina;
     const [primas_pendientes] = await conn.query(`SELECT * FROM PRIMA_PENDIENTE3 WHERE ID_OFICINA=${oficina}`);
-    console.log(primas_pendientes)
     res.send(primas_pendientes)
 })
 
