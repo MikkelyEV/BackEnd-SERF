@@ -15,7 +15,7 @@ app.get('/oficinas', async (req, res) => {
 
 app.get('/primas_pendientes', async (req, res) => {
     const oficina = req.body.id_oficina;
-    const [primas_pendientes] = await conn.query(`SELECT * FROM PRIMA_PENDIENTE WHERE ID_OFICINA=${oficina}`);
+    const [primas_pendientes] = await conn.query(`SELECT * FROM PRIMA_PENDIENTE3 WHERE ID_OFICINA=${oficina}`);
     console.log(primas_pendientes)
     res.send(primas_pendientes)
 })

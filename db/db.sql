@@ -4,7 +4,7 @@ clave_oficina text Not null,
 Primary key(id_oficina)
 );
 
-CREATE TABLE PRIMA_PENDIENTE(
+CREATE TABLE PRIMA_PENDIENTE3(
 id_fianza serial Not null,
 id_oficina int Not null,
 nombre_fiado text Not null,
