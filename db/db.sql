@@ -12,7 +12,6 @@ tipo_movimiento text Not null,
 fecha_inicio date Not null,
 fecha_fin date Not null,
 importe int not null,
-created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 Primary key (id_fianza),
  Foreign key (id_oficina) REFERENCES OFICINA(id_oficina)
 );
